@@ -36,12 +36,12 @@ def setup():
     setup(
     name='automated_mcq_generator',
     version='1.0.0',
-    description='Automated MCQ Generator using Langchain and OpenAI API',
-    author='sunny savita',
-    author_email='sunny.savita@ineuron.ai',
+    description='Automated MCQ Generator using Langchain and Google Gemini',
+    author='Ismail Abbas Aminu ',
+    author_email='ibnabbas1981a@gmail.com',
     packages=find_packages(),
     install_requires=[
-        'openai',
+        'langchain[google-genai]',
         'langchain',
         'streamlit',
         'python-dotenv',
