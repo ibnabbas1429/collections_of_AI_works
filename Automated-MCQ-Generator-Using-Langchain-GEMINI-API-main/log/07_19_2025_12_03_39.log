@@ -1,0 +1,7 @@
+[2025-07-19 12:03:40,505] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 12:03:40,505] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 12:03:41,318] 45 root - INFO -Setting up quiz generation chain
+[2025-07-19 12:03:41,318] 66 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 12:03:41,318] 70 root - INFO -Setting up sequential chain for quiz generation and evaluation.
+[2025-07-19 12:04:01,343] 1988 langsmith.client - WARNING -Failed to multipart ingest runs: langsmith.utils.LangSmithAuthError: Authentication failed for https://api.smith.langchain.com/runs/multipart. HTTPError('401 Client Error: Unauthorized for url: https://api.smith.langchain.com/runs/multipart', '{"error":"Unauthorized"}\n')trace=0b1ae398-8534-4784-9c85-70439afa0b5b,id=0b1ae398-8534-4784-9c85-70439afa0b5b; trace=0b1ae398-8534-4784-9c85-70439afa0b5b,id=c850eec9-e2d5-4e07-8162-40719f4c621e
+[2025-07-19 12:04:06,436] 2056 langsmith.client - WARNING -Failed to send compressed multipart ingest: langsmith.utils.LangSmithAuthError: Authentication failed for https://api.smith.langchain.com/runs/multipart. HTTPError('401 Client Error: Unauthorized for url: https://api.smith.langchain.com/runs/multipart', '{"error":"Unauthorized"}\n')trace=0b1ae398-8534-4784-9c85-70439afa0b5b,id=c850eec9-e2d5-4e07-8162-40719f4c621e; trace=0b1ae398-8534-4784-9c85-70439afa0b5b,id=0b1ae398-8534-4784-9c85-70439afa0b5b

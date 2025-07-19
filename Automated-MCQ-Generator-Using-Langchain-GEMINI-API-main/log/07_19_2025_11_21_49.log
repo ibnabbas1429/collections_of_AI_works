@@ -1,0 +1,30 @@
+[2025-07-19 11:21:51,039] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 11:21:51,039] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 11:21:51,793] 44 root - INFO -Setting up quiz generation chain
+[2025-07-19 11:21:51,794] 65 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 11:21:51,794] 69 root - INFO -Setting up sequential chain for quiz generation and evaluation.
+[2025-07-19 11:24:16,035] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 11:24:16,035] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 11:24:16,042] 44 root - INFO -Setting up quiz generation chain
+[2025-07-19 11:24:16,042] 65 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 11:24:16,042] 69 root - INFO -Setting up sequential chain for quiz generation and evaluation.
+[2025-07-19 11:29:58,863] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 11:29:58,864] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 11:29:58,867] 44 root - INFO -Setting up quiz generation chain
+[2025-07-19 11:29:58,867] 65 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 11:29:58,867] 69 root - INFO -Setting up sequential chain for quiz generation and evaluation.
+[2025-07-19 11:40:01,234] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 11:40:01,234] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 11:40:01,238] 44 root - INFO -Setting up quiz generation chain
+[2025-07-19 11:40:01,238] 65 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 11:40:01,238] 69 root - INFO -Setting up sequential chain for quiz generation and evaluation.
+[2025-07-19 11:43:35,686] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 11:43:35,686] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 11:43:35,689] 44 root - INFO -Setting up quiz generation chain
+[2025-07-19 11:43:35,689] 65 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 11:43:35,689] 69 root - INFO -Setting up sequential chain for quiz generation and evaluation.
+[2025-07-19 11:45:57,217] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 11:45:57,217] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 11:45:57,217] 44 root - INFO -Setting up quiz generation chain
+[2025-07-19 11:45:57,217] 65 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 11:45:57,217] 69 root - INFO -Setting up sequential chain for quiz generation and evaluation.
