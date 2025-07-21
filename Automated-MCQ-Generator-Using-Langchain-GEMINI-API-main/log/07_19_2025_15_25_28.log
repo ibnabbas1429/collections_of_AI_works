@@ -1,0 +1,29 @@
+[2025-07-19 15:25:34,391] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 15:25:34,392] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 15:25:40,939] 45 root - INFO -Setting up quiz generation chain
+[2025-07-19 15:25:40,939] 66 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 15:25:40,939] 70 root - INFO -Setting up sequential chain for quiz generation and evaluation.
+[2025-07-19 15:28:32,548] 725 langsmith.client - WARNING -Failed to get info from https://api.smith.langchain.com: LangSmithConnectionError('Connection error caused failure to GET /info in LangSmith API. Please confirm your internet connection. ConnectionError(MaxRetryError(\'HTTPSConnectionPool(host=\\\'api.smith.langchain.com\\\', port=443): Max retries exceeded with url: /info (Caused by ReadTimeoutError("HTTPSConnectionPool(host=\\\'api.smith.langchain.com\\\', port=443): Read timed out. (read timeout=90.001)"))\'))\nContent-Length: None\nAPI Key: ')
+[2025-07-19 15:30:47,029] 1741 langsmith.client - WARNING -Failed to batch ingest runs: langsmith.utils.LangSmithConnectionError: Connection error caused failure to POST https://api.smith.langchain.com/runs/batch in LangSmith API. Please confirm your internet connection. ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'api.smith.langchain.com\', port=443): Max retries exceeded with url: /runs/batch (Caused by ReadTimeoutError("HTTPSConnectionPool(host=\'api.smith.langchain.com\', port=443): Read timed out. (read timeout=10.0)"))'))
+Content-Length: 38717
+API Key: 
+post: trace=f00bc4df-0f40-4ce1-84b1-3d4ee277b7d7,id=f00bc4df-0f40-4ce1-84b1-3d4ee277b7d7; trace=f00bc4df-0f40-4ce1-84b1-3d4ee277b7d7,id=f79e4f6c-9216-4af8-bc12-441db2166b62
+[2025-07-19 15:36:27,298] 65 langchain_google_genai.chat_models - WARNING -Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.250.201.74:443: tcp handshaker shutdown.
+[2025-07-19 15:48:43,327] 1741 langsmith.client - WARNING -Failed to batch ingest runs: langsmith.utils.LangSmithConnectionError: Connection error caused failure to POST https://api.smith.langchain.com/runs/batch in LangSmith API. Please confirm your internet connection. ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'api.smith.langchain.com\', port=443): Max retries exceeded with url: /runs/batch (Caused by ReadTimeoutError("HTTPSConnectionPool(host=\'api.smith.langchain.com\', port=443): Read timed out. (read timeout=10.0)"))'))
+Content-Length: 58129
+API Key: 
+patch: trace=f00bc4df-0f40-4ce1-84b1-3d4ee277b7d7,id=f79e4f6c-9216-4af8-bc12-441db2166b62; trace=f00bc4df-0f40-4ce1-84b1-3d4ee277b7d7,id=f00bc4df-0f40-4ce1-84b1-3d4ee277b7d7
+[2025-07-19 16:54:17,441] 1741 langsmith.client - WARNING -Failed to batch ingest runs: langsmith.utils.LangSmithAuthError: Authentication failed for https://api.smith.langchain.com/runs/batch. HTTPError('401 Client Error: Unauthorized for url: https://api.smith.langchain.com/runs/batch', '{"error":"Unauthorized"}\n')
+post: trace=dc968421-fc11-4df0-967e-24776fb7be3e,id=dc968421-fc11-4df0-967e-24776fb7be3e; trace=dc968421-fc11-4df0-967e-24776fb7be3e,id=f92aac26-7f1c-470d-a9ac-91fac921e495
+[2025-07-19 16:54:41,948] 1741 langsmith.client - WARNING -Failed to batch ingest runs: langsmith.utils.LangSmithAuthError: Authentication failed for https://api.smith.langchain.com/runs/batch. HTTPError('401 Client Error: Unauthorized for url: https://api.smith.langchain.com/runs/batch', '{"error":"Unauthorized"}\n')
+patch: trace=dc968421-fc11-4df0-967e-24776fb7be3e,id=dc968421-fc11-4df0-967e-24776fb7be3e; trace=dc968421-fc11-4df0-967e-24776fb7be3e,id=f92aac26-7f1c-470d-a9ac-91fac921e495
+[2025-07-19 17:11:18,882] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 17:11:18,883] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 17:11:18,908] 45 root - INFO -Setting up quiz generation chain
+[2025-07-19 17:11:18,915] 66 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 17:11:18,915] 70 root - INFO -Setting up sequential chain for quiz generation and evaluation.
+[2025-07-19 17:13:35,718] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 17:13:35,719] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 17:13:35,722] 45 root - INFO -Setting up quiz generation chain
+[2025-07-19 17:13:35,722] 66 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 17:13:35,722] 70 root - INFO -Setting up sequential chain for quiz generation and evaluation.

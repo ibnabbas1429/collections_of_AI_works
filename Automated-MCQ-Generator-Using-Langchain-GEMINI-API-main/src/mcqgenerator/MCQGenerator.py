@@ -10,7 +10,7 @@ from src.mcqgenerator.logger import logging
 
 from langchain.chat_models import init_chat_model
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain, sequentialChain
+from langchain.chains import LLMChain, SequentialChain
 
 #Load environment variables from .env file
 load_dotenv()
@@ -29,7 +29,7 @@ You are an expert Multi Choice Question maker, Given the above, it is your job t
 create a question of number multiple choice questions for {subject} students in {tone} tone.
 Make sure the questions are not repeated and check all the questions to be confirming the text as well.
 Make sure to format your response like RESPONSE_JSON \ below and use it as a guide. \ 
-Ensure to make {number MCQ}  
+Ensure to make {number}  
  """
 
 
@@ -39,7 +39,7 @@ test_generation_prompt = PromptTemplate(
 
 )
 
-test_chain = LLMChain(llm=llm, prompts=test_generation_prompt, output_key="quiz", verbose=True)
+test_chain = LLMChain(llm=llm, prompt=test_generation_prompt, output_key="quiz", verbose=True)
 
 logging.info("Setting up quiz generation chain")
 
@@ -63,11 +63,11 @@ test_Evaluation_prompt = PromptTemplate(
 )
 
 logging.info("Setting up test evaluation chain. ")
-review_chain = LLMChain(llm=llm, prompts=test_generation_prompt, output_key="quiz", verbose=True )
+review_chain = LLMChain(llm=llm, prompt=test_generation_prompt, output_key="review", verbose=True )
 
 #This is an overall Chain where we run the two chains in Sequence
 logging.info("Setting up sequential chain for quiz generation and evaluation.")
-generate_evaluate_chain = sequentialChain(
+generate_evaluate_chain = SequentialChain(
                     chains=[test_chain, review_chain], 
                     input_variables=["text", "number","subject", "tone", "response_json"],
                     output_variables=["quiz", "review"],
