@@ -2,11 +2,10 @@ import streamlit as st
 from src.mcqgenerator.utils import read_file, get_data
 from src.mcqgenerator.MCQGenerator import llm, template
 from langchain.prompts import PromptTemplate
-#from langchain.chains import LLMChain
 from langchain_core.runnables import RunnableLambda
 import json
 
-st.title("Hello, Welcome to a multiple choice question generator")
+st.title("Hello, Welcome to a Multiple Choice Question Generator")
 
 uploaded_file = st.file_uploader("Upload a file in .txt or .pdf", type=["pdf", "txt"])
 
@@ -22,7 +21,6 @@ if uploaded_file is not None:
         if st.button("Generate MCQs"):
             with st.spinner("Generating MCQs..."):
 
-                # Now define response_json safely inside the button block
                 response_json = {
                     "1": {
                         "mcq": "multiple choice question",
@@ -51,23 +49,31 @@ if uploaded_file is not None:
                     template=template
                 )
 
-                chain = prompt | llm | RunnableLambda(lambda x: { "quiz" : x})
+                def clean_gemini_output(ai_output):
+                    content = ai_output.content.strip()
+                    if content.startswith("```json"):
+                        content = content.removeprefix("```json").removesuffix("```").strip()
+                    elif content.startswith("```"):
+                        content = content.removeprefix("```").removesuffix("```").strip()
+                    return {"quiz": content}
 
-                result = chain.invoke({"text":text,
-                    "number":number,
-                    "subject":subject,
-                    "tone":tone,
-                    "response_json":json.dumps(response_json)
-                    }
-                    
-                )
+                chain = prompt | llm | RunnableLambda(clean_gemini_output)
+
+                result = chain.invoke({
+                    "text": text,
+                    "number": number,
+                    "subject": subject,
+                    "tone": tone,
+                    "response_json": json.dumps(response_json)
+                })
 
                 st.subheader("Generated MCQs")
                 try:
-                    table_data = get_data(result)
+                    table_data = get_data(result["quiz"])
                     st.table(table_data)
                 except Exception:
                     print(result)
                     st.write(result)
+
     except Exception as e:
         st.error(f"Error: {e}")
