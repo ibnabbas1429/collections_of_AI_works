@@ -1,5 +1,5 @@
 import os
-import PyPDF2
+from PyPDF2 import PdfReader
 import json
 import traceback
 from src.mcqgenerator.logger import logging
@@ -9,7 +9,7 @@ def read_file(file):
     logging.info(f"Reading file: %s", file.name)
     if file.name.endswith(".pdf"):
         try:
-            pdf_reader=PyPDF2.PdfFileReader(file)
+            pdf_reader=PdfReader(file)
             text=""
             for page in pdf_reader.pages:
                 text+=page.extract_text()

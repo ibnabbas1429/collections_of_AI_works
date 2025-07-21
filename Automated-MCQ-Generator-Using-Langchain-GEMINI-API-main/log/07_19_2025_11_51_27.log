@@ -1,0 +1,5 @@
+[2025-07-19 11:51:28,745] 17 root - INFO -Loading environment variables from .env file
+[2025-07-19 11:51:28,745] 22 root - INFO -Google Gemini API Key logging successfully
+[2025-07-19 11:51:29,564] 45 root - INFO -Setting up quiz generation chain
+[2025-07-19 11:51:29,564] 66 root - INFO -Setting up test evaluation chain. 
+[2025-07-19 11:51:29,564] 70 root - INFO -Setting up sequential chain for quiz generation and evaluation.
