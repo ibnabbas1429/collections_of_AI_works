@@ -2,7 +2,8 @@ import streamlit as st
 from src.mcqgenerator.utils import read_file, get_data
 from src.mcqgenerator.MCQGenerator import llm, template
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+#from langchain.chains import LLMChain
+from langchain_core.runnables import RunnableLambda
 import json
 
 st.title("Hello, Welcome to a multiple choice question generator")
@@ -50,14 +51,15 @@ if uploaded_file is not None:
                     template=template
                 )
 
-                chain = LLMChain(llm=llm, prompt=prompt)
+                chain = prompt | llm | RunnableLambda(lambda x: { "quiz" : x})
 
-                result = chain.run(
-                    text=text,
-                    number=number,
-                    subject=subject,
-                    tone=tone,
-                    response_json=json.dumps(response_json)
+                result = chain.invoke({"text":text,
+                    "number":number,
+                    "subject":subject,
+                    "tone":tone,
+                    "response_json":json.dumps(response_json)
+                    }
+                    
                 )
 
                 st.subheader("Generated MCQs")
